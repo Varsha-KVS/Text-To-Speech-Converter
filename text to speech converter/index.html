@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Text to Speech</title>
+    <link rel="stylesheet" href="static/index.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Text To Speech</h1>
+
+        <form method="POST" action="/speak">
+    <textarea id="autoBox" name="text" placeholder="Enter text"></textarea>
+    <button type="submit">Speak</button>
+</form>
+
+<script>
+  const box = document.getElementById("autoBox");
+  box.addEventListener("input", () => {
+    box.style.height = "auto";                 // reset height
+    box.style.height = box.scrollHeight + "px"; // grow/shrink to fit content
+  });
+</script>
+    </div>
+</body>
+</html>
